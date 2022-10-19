@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({prod}) => {
-    console.log(prod);
+    //console.log(prod);
     //renderizado en el DOM de los productos
     return (
   <article className='card'> 
