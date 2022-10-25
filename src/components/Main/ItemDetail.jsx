@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import ItemCount from "./ItemCount";
 
 const ItemDetail =({item})  => {
-    const[unidades, setUnidades]= useState(0)
+  const [unidades,setUnidades] =useState(0)
 
-    const prueba=(numero)=>{
-        setUnidades(numero) 
+const Prueba=(numero)=>{
+setUnidades(numero)}
         
-        }
+        
         return (
             <div className="container-detail">
                 <img src={item.img} alt=""/>
@@ -16,16 +16,22 @@ const ItemDetail =({item})  => {
                     <h2>{item.title}</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sed dignissimos, quasi deleniti voluptates asperiores voluptatum quod natus incidunt similique.</p>
             
-            {unidades === 0 ? (<ItemCount prueba={prueba} stock={10} initial={1}/>
+         <ItemCount Prueba={Prueba} 
+            stock={10}
+            initial={1}
+            />
+            {unidades=== 0 ?( 
+                <p>este es el item count</p>
             ):(
-<Link to="/cart">ir al carrito</Link>                )
-            }
+                <button>ir al carrito</button>
+            )}
+                
             </div>
             
-            
-            </div>)}
+            </div>
+            )
+        
 
-
-
+        }
 
 export default ItemDetail
